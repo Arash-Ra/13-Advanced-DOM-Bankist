@@ -41,3 +41,10 @@ document.getElementById('section--1');
 
 const allButtons = document.getElementsByTagName('button');
 console.log(document.getElementsByClassName('btn'));
+
+// Creating and inserting Elements
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+// message.textContent = 'We use cokies for improved functionality and analytics.';
+message.innerHTML =
+  'We use cokies for improved functionality and analytics.<button class="btnbtn--close-cookie">Got it</button>';
