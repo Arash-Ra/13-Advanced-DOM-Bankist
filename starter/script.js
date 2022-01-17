@@ -34,7 +34,10 @@ document.addEventListener('keydown', function (e) {
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
-console.log(document.querySelector('.header'));
+const header = document.querySelector('.header');
+// header.prepend(message);
+header.append(message);
+// header.append(message, cloneNode(true));
 
 const allSections = document.querySelectorAll('.section');
 document.getElementById('section--1');
