@@ -34,10 +34,6 @@ document.addEventListener('keydown', function (e) {
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
-const header = document.querySelector('.header');
-// header.prepend(message);
-header.append(message);
-// header.append(message, cloneNode(true));
 
 const allSections = document.querySelectorAll('.section');
 document.getElementById('section--1');
@@ -51,3 +47,17 @@ message.classList.add('cookie-message');
 // message.textContent = 'We use cokies for improved functionality and analytics.';
 message.innerHTML =
   'We use cokies for improved functionality and analytics.<button class="btnbtn--close-cookie">Got it</button>';
+const header = document.querySelector('.header');
+// header.prepend(message);
+header.append(message);
+// header.append(message, cloneNode(true));
+
+// header.before(message);
+// header.after(message);
+
+// Delete Elements:
+document
+  .querySelector('.btnbtn--close-cookie')
+  .addEventListener('click', function () {
+    message.remove();
+  });
