@@ -62,3 +62,10 @@ document
     message.remove();
     // message.parentElement.removeChild(message);
   });
+
+////  Video 187
+message.style.backgroundColor = '#37383d';
+message.style.width = '%120';
+console.log(getComputedStyle(message).color);
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
