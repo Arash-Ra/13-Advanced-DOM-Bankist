@@ -69,5 +69,6 @@ message.style.width = '%120';
 console.log(getComputedStyle(message).color);
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+//   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
 
 document.documentElement.style.setProperty('--color-primary', 'orangered');
