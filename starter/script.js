@@ -75,6 +75,18 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 //document.documentElement.style.setProperty('--color-primary', 'orangered');
 //document.documentElement.style.setProperty('--color-primary', 'orangered');
 // document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// Atributes
 const logo = document.querySelector('.nav__logo');
 console.log(logo.alt);
 console.log(logo.src);
+console.log(logo.className);
+
+logo.alt = 'Beautiful minimalist logo';
+
+// Non standard attributes
+console.log(logo.designer);
+// this will provide the result of undefine, because this attribute is not standard
+// we can get that attribute from DOM
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('company', 'Bankist');
