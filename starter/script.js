@@ -76,7 +76,7 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 //document.documentElement.style.setProperty('--color-primary', 'orangered');
 // document.documentElement.style.setProperty('--color-primary', 'orangered');
 
-// Atributes
+//// Atributes
 const logo = document.querySelector('.nav__logo');
 console.log(logo.alt);
 console.log(logo.src);
@@ -84,7 +84,7 @@ console.log(logo.className);
 
 logo.alt = 'Beautiful minimalist logo';
 
-// Non standard attributes, reading the value
+//// Non standard attributes, reading the value
 console.log(logo.designer);
 // this will provide the result of undefine, because this attribute is not standard
 // we can get that attribute from DOM
@@ -97,12 +97,12 @@ console.log(link.href);
 // NOTE: if the link is relevant we have to use getAttribute
 console.log(link.getAttribute('logo.href'));
 
-// Date Atrributes
+//// Date Atrributes
 // we can use "dataset" in javascipt if the attribute in the html starts with "data"
 // in html here we have "data-version-number" so in javascript we use Camel case "versionNumber"
 console.log(logo.dataset.versionNumber);
 
-// Classes
+//// Classes
 // It is possible to pass multiple classess and valuses
 logo.classList.add('c', 'j');
 logo.classList.remove('c');
