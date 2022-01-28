@@ -109,5 +109,21 @@ logo.classList.remove('c');
 logo.classList.toggle('c');
 logo.classList.contains('c'); // note that contains is used, not includes like we use for Arrays
 
-//// DO NOT USE BELOW, instead use add, remove,toggle, contains methods
-logo.className = 'Jonas';
+// //// DO NOT USE BELOW, instead use add, remove,toggle, contains methods
+// logo.className = 'Jonas';
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+btnScrollTo.addEventListener('click', function (e) {
+  // getBoundingClientRect it gets the relative location of the element, x,y andthe distance from that element to the top,buttom,left,right
+  const s1coords = section1.getBoundingClientRect();
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll (X/Y', window.pageXOffset, pageYOffset);
+
+  console.log(
+    'Height/Width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+});
