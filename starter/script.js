@@ -119,7 +119,7 @@ btnScrollTo.addEventListener('click', function (e) {
 
   console.log(e.target.getBoundingClientRect());
 
-  console.log('Current scroll (X/Y', window.pageXOffset, pageYOffset);
+  console.log('Current scroll (X/Y', window.pageXOffset, window.pageYOffset);
 
   console.log(
     'Height/Width viewport',
@@ -132,4 +132,19 @@ btnScrollTo.addEventListener('click', function (e) {
   //   document.documentElement.clientHeight,
   //   document.documentElement.clientWidth
   // );
+
+  //// scrolling
+  // It jumps to the top left of section 1
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset, //current position + current scroll
+
+  //   s1coords.top + //s1coords.top > is the relative top of the view port, not the top of the document
+  //     window.pageYOffset
+  // );
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset, //current position + current scroll
+
+    top: s1coords.top + window.pageYOffset,
+    behavior: 'smooth', // It jumps to the specific location smoothly
+  });
 });
