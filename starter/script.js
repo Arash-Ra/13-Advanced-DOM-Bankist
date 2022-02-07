@@ -146,8 +146,30 @@ btnScrollTo.addEventListener('click', function (e) {
 
     top: s1coords.top + window.pageYOffset,
     behavior: 'smooth', // It jumps to the specific location smoothly
-
-    // top: s1coords.top + window.pageYOffset,
-    // behavior: 'smooth', // It jumps to the specific location smoothly
   });
+  section1.scrollIntoView({ bevavior: 'smooth' });
 });
+
+const h1 = document.querySelector('h1');
+h1.addEventListener('mouseenter', function (e) {
+  // mouseenter is when we hover the mouse on something
+  alert('addEventListener: Great! You are Reading the Heading :D');
+});
+
+h1.onmouseenter = function (e) {
+  // onmouseenter is a bit old fasion and we use addEventListener instead
+  'mouseenter',
+    function (e) {
+      // mouseenter is when we hover the mouse on something
+      alert('addEventListener: Great! You are Reading the Heading :D');
+    };
+};
+
+const alertH1 = function (e) {
+  // mouseenter is when we hover the mouse on something
+  alert('addEventListener: Great! You are Reading the Heading :D');
+};
+h1.addEventListener('mouseenter', alertH1);
+
+setTimeout(() => h1.addEventListener('mouseenter', alertH1), 3000);
+// this will remove the eventListener after 3 seconds
