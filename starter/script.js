@@ -173,3 +173,6 @@ h1.addEventListener('mouseenter', alertH1);
 
 setTimeout(() => h1.addEventListener('mouseenter', alertH1), 3000);
 // this will remove the eventListener after 3 seconds
+
+// we could have just remove  addEventListener if we do not need the it anymore
+// h1.addEventListener('mouseenter', alertH1)
